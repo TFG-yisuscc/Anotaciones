@@ -1,0 +1,15 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: c9def620-1b1b-4d8b-b4a5-32067d4ec244
+  # title: Anotaciones para el TFG
+  # description:
+  # keywords: []
+  # authors: [Jesús Carrascosa Carro]
+  github: https://github.com/TFG-yisuscc/Anotaciones
+  # To autogenerate a Table of Contents, run "myst init --write-toc"
+site:
+  template: book-theme
+  # options:
+  #   favicon: favicon.ico
+  #   logo: site_logo.png
