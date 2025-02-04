@@ -1,0 +1,1 @@
+- Quizas sea importante comprobar como las especificaciones de la tarjeta sd afectan al rendimiento en general 
