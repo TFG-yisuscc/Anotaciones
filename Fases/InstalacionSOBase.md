@@ -1,4 +1,5 @@
-
+# Instalación del SO y drivers
+## Parte común
  Haciendo uso de la herramienta RP imager v1.8.5-2 instalada desde el repositorio oficial de fedora ,ejecutandose en un slimbook prox15 corriendo fedora workstation 41, instalo la versión de 64 bit de RpiOS Lite lanzada el 2024-11-19 [link](https://downloads.raspberrypi.com/raspios_lite_arm64/images/raspios_lite_arm64-2024-11-19/) con la siguiente configuración:
  - Dispositivo: Rpi 5.
  - Sistema operativo: Rpi Lite
@@ -10,7 +11,8 @@
 - ssh: por contraseñas
 - telemetria desactivada
 - LAN inalambrica: configurada(españa) para mi movil (intención de usar cableada).
-mientras se intalaba el soft en la tarjeta micro sd , he ido colocando las patas de goma en la carcasa (NO he colocado el disipador pero se ha conectado el ventilador en la RPi por ahora) y montado la rpi en la carcasa (sin atornillar).
+mientras se intalaba el soft en la tarjeta micro sd , he ido colocando las patas de goma en la carcasa (NO he colocado el disipador y se ha desconectado el ventilador en la RPi por ahora) y montado la rpi en la carcasa (sin atornillar) para protegerla .
+#primer intento
 Siguiendo los preparativos de la guía del [AI KIT](https://www.raspberrypi.com/documentation/accessories/ai-kit.html#ai-module-features):
 
 ```bash
@@ -83,5 +85,42 @@ sudo apt install hailo-all
 # reinicio
 sudo reboot
 ```
-No funcion, procedoa hacer otra instalacíon limpia y reintentarlo 
+No funciona, procedo a  hacer otra instalacíon limpia y reintentarlo.
+# Segundo intento
+
+ Reinstalo en la sd el  mismo SO siguiendo los mismos pasos,  esta vez con el AI kit  ya instalado (verificando que tuviera los conectores)  me conector por ssh (misma configuración) y procedo a seguir los pasos de la [guía de hailo](https://github.com/hailo-ai/hailo-rpi5-examples/blob/main/doc/install-raspberry-pi5.md) previamente habiendo actualizado la clave ssh en mi dispositivo 
+ ejecuto los siguientes comandos
+ ```bash 
+sudo apt update && sudo apt full-upgrade
+#en teoria por reproucibilidad creo que deberiamos evitar el full-upgrade
+# ya que actualiza la distro al completo 
+
+# compruebo el firmware del bootloader 
+sudo rpi-eeprom-update
+# no es necesario actualizar
+sudo apt install hailo-all
+# he tenido un apagon mientras se instalaba
+#ejecuto sdo dpkg --configure - a
+sudo dpkg --configure - a
+sudo apt install hailo-all
+#activamos el pcie3 y reiniciamos
+sudo raspi-config
+# comprobamos 
+hailortcli fw-control identify
+ ```
+ Esto devuelve: 
+> Executing on device: 0000:01:00.0
+> Identifying board
+> Control Protocol Version: 2
+> Firmware Version: 4.20.0 (release,app,extended context switch buffer)
+> Logger Version: 0
+> Board Name: Hailo-8
+> Device Architecture: HAILO8L
+> Serial Number: HLDDLBB243500705
+> Part Number: HM21LB1C2LAE
+> Product Name: HAILO-8L AI ACC M.2 B+M KEY MODULE EXT TMP
+
+
+
+
 
