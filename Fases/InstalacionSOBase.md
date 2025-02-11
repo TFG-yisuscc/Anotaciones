@@ -119,6 +119,8 @@ hailortcli fw-control identify
 > Serial Number: HLDDLBB243500705
 > Part Number: HM21LB1C2LAE
 > Product Name: HAILO-8L AI ACC M.2 B+M KEY MODULE EXT TMP
+Se considera la instalación existosa y se pasa al siguente punto del proyecto 
+instalar los componentes de la IA(mientras que creo un script con la instalación del software y los drivers).
 
 
 
