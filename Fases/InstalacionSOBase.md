@@ -121,7 +121,7 @@ hailortcli fw-control identify
 > Product Name: HAILO-8L AI ACC M.2 B+M KEY MODULE EXT TMP
 Se considera la instalación existosa y se pasa al siguente punto del proyecto 
 instalar los componentes de la IA(mientras que creo un script con la instalación del software y los drivers).
-
+Aparentemente funciona todos los componentes-> desconecto la hailo board y procedo  aha hacer la instalación de ollama 
 
 
 
