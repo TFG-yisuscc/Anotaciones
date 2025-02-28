@@ -29,7 +29,6 @@ ollama run tinyllama
 
 
 
-
 ```
 2. En el terminal de mi portatil(fedora) instalo [open-webui](https://docs.openwebui.com/getting-started/quick-start/) mediante python(conda) aunque debería haber usado docker por reproducibilidad:
 ```bash
@@ -37,4 +36,28 @@ conda create -n open-webui python=3.11
 conda activate open-webui
 pip install open-webui
 open-webui serve
+```
+
+# Actualización 2025-02-27
+ Pareceser que el instalador ollama tiee un buhg que impide que se descargen los modelos correctamente, ver los siguientes enlaces 
+ - [8484](https://github.com/ollama/ollama/issues/8484)
+ - [comentario utili 1 ](https://github.com/ollama/ollama/issues/8484#issuecomment-2600860889)
+- [8406](https://github.com/ollama/ollama/issues/8406)
+ 
+ # Actualización 2026-02-28
+ [Exposición de puertos](https://github.com/ollama/ollama/blob/main/docs/faq.md#setting-environment-variables-on-linux)
+ Empiezo con una instalación en limpio
+ Parece que el problema se corrige en las versiones posteriores 
+ voy a provar con la versión v0.5.12
+ ```bash 
+curl -fsSL https://ollama.com/install.sh | OLLAMA_VERSION=0.5.12 sh
+ollama pull llama3.2
+#esta vez ha sido un exito 
+#procedo a exponer el puerto de ollama para hacer queries
+sudo nano /etc/systemd/system/ollama.service
+#añado lo siguiente al al final de service
+#[Service]
+#Environment="OLLAMA_HOST=0.0.0.0:11434"
+systemctl daemon-reload
+systemctl restart ollama
 ```
