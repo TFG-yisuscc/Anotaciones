@@ -30,7 +30,7 @@ ollama run tinyllama
 
 
 ```
-2. En el terminal de mi portatil(fedora) instalo [open-webui](https://docs.openwebui.com/getting-started/quick-start/) mediante python(conda) aunque debería haber usado docker por reproducibilidad:
+2. En el terminal de mi portatil(fedora) instalo [open-webui](https://docs.openwebui.com/getting-started/quick-start/) mediante python(conda) aunque debería haber usado docker por reproducibilidad:-> me parece demasiado engorroso  para algo que es simplemanete una pruebecilla 
 ```bash
 conda create -n open-webui python=3.11
 conda activate open-webui
