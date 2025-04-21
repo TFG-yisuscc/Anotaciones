@@ -61,3 +61,4 @@ sudo nano /etc/systemd/system/ollama.service
 systemctl daemon-reload
 systemctl restart ollama
 ```
+# Reinicio el proyecto a 2025-04-21 ver archivo titulado reinicio

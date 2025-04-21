@@ -124,5 +124,5 @@ instalar los componentes de la IA(mientras que creo un script con la instalació
 Aparentemente funciona todos los componentes-> desconecto la hailo board y procedo  aha hacer la instalación de ollama 
 
 
-
+# Reinicio el proyecto a 2025-04-21 ver archivo titulado reinicio
 
