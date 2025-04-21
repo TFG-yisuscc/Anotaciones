@@ -1,1 +1,2 @@
 - Quizas sea importante comprobar como las especificaciones de la tarjeta sd afectan al rendimiento en general 
+-El otro día recordé que un artículo(que no consigo encontrar) que analizaba las capacidades de chatgpt de analizar una imagen(donde y cuando se tomó) y su uso  para el stakerware. ¿Podría ser interesante para sistemas de monitorización de la biodiversidad urbana(digo urbana, porque me sorprendería si no han utilizado imagenes del google street view y similares para el entrenamiento, y el streetview creo que lo actualizan con más frecuencias en las ciudades)?
